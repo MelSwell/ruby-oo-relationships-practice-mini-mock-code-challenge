@@ -45,26 +45,34 @@ We've provided you with a console that you can use to test your code. To enter a
 ### `Book`
 Build the following methods on the Book class
 
-- `Book.all`
+x `Book.all`
 should return all of the books
-- `Book#author`
+    <!---  self.all                 -->  
+x `Book#author`
 should return the author instance who wrote this book
-- `Book#title`
+    <!---    (select)              --> 
+x `Book#title`
 should return the title of the book
-- `Book#word_count`
+    <!---       (attr_reader)            --> 
+x `Book#word_count`
 should return the number of words in the book
+    <!---       (attr_reader)            --> 
 
 ### `Author`
 Build the following methods on the Author class
 
-- `Author.all`
+x `Author.all`
 should return all of the authors
-- `Author#books`
+    <!---       self.all            --> 
+x `Author#books`
 should return all of the books an author has written
-- `Author#write_book`
+    <!---       (select)            --> 
+x `Author#write_book`
 should take arguments of a title and word count and make a new Book instance associated with this author
-- `Author#total_words`
+    <!---        (Book.new in body)          --> 
+x `Author#total_words`
 should return the total number of words that author has written across all of their authored books.
-- `Author.most_words`
+    <!---     (#books.map.reduce)              --> 
+x `Author.most_words`
 should return the author instance who has written the most words
-
+    <!---       self.most_words (use all, map, max, #total_words, and select)            --> 
